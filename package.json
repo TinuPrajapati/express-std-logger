@@ -1,0 +1,51 @@
+{
+  "name": "express-std-logger",
+  "version": "1.1.0",
+  "description": "Winston logger and Express response helpers with the same console and file format for every Node backend.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./responsehandler": {
+      "types": "./dist/responseHandler.d.ts",
+      "import": "./dist/responseHandler.js",
+      "default": "./dist/responseHandler.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "keywords": [
+    "express",
+    "logger",
+    "winston",
+    "response",
+    "middleware",
+    "typescript"
+  ],
+  "dependencies": {
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
